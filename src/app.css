@@ -87,3 +87,12 @@ button{
 .item_channelName{
   display: block;
 }
+/*detail*/
+.detail{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail_video{
+  
+}
