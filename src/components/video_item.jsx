@@ -2,6 +2,7 @@ import React from 'react';
 
 function VideoItem(props){
     const handleClick = (event) =>{
+        window.scrollTo(0, 0);
         props.setSelectVideo(true);
         let id = (event.target.id);
         console.log(id)
