@@ -2,9 +2,15 @@ import { useEffect, useState } from 'react';
 import './app.css';
 import VideoList from './components/video_list';
 import Header from './components/header'
+import Detail from './components/detail';
 
 function App() {
   const [videos, setVideos] = useState([]);
+  const [selectVideo,setSelectVideo] = useState(false);
+  const [id,setId] = useState('');
+  const detail = (id)=>{
+    setId(id);
+  }
   const search = query =>{
     const requestOptions = {
       method: 'GET',
@@ -35,7 +41,8 @@ function App() {
   return (
     <>
     <Header search={search} />
-    <VideoList videos={videos} />
+    {selectVideo && <Detail videos={videos} id={id}/>}
+    <VideoList videos={videos} detail={detail} selectVideo={selectVideo} setSelectVideo={setSelectVideo}/>
     </>
   );
 }
