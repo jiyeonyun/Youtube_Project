@@ -4,7 +4,7 @@ const Detail = (props) => (
             <section className='detail'>
                 <iframe 
                     src={`https://youtube.com/embed/${props.id}`} 
-                    width="100%"
+                    width="80%"
                     height="500px"
                     frameBorder="0"
                     className='detail_video'
