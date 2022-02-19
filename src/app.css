@@ -90,9 +90,11 @@ button{
 /*detail*/
 .detail{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: 100%;
 }
-.detail_video{
-  
+.video_detail{
+  text-align: left;
+  width: 80%;
 }
