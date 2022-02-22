@@ -7,7 +7,6 @@ import VideoList from './components/video_list/video_list';
 function App({youtube}){
   const[videos, setVideos] = useState([]);
   const[selectedVideo,setSelectedVideo] = useState(null);
-  
   const selectVideo = (video) =>{
     setSelectedVideo(video);
   }
@@ -15,6 +14,7 @@ function App({youtube}){
     youtube
       .search(query)
       .then(videos=> setVideos(videos)); 
+      setSelectedVideo(null);
   }; 
   useEffect(()=>{
     youtube
