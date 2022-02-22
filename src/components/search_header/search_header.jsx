@@ -17,9 +17,12 @@ const SearchHeader = memo(
                 handleSearch();
             }
         };
+        const reload= ()=>{
+            window.location.reload();
+        }
         return(
                 <header className={styles.header}>
-                    <div className={styles.logo}>
+                    <div className={styles.logo} onClick={reload}>
                         <img className={styles.img} src="/images/logo.png" alt="logo" />
                         <h1 className={styles.title}>Youtube</h1>
                     </div>
